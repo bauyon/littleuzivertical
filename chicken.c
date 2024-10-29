@@ -1,7 +1,7 @@
 #include <stdio.h>
 int *foo(int *p, int *q)
 {
-  *p = *q + 2;
+  *p = ++*q + 2;
   return p;
 }
 int main(void)
@@ -11,6 +11,6 @@ int main(void)
   j = 6;
   q = foo(&i, &j);
   p = q;
-  *p = i + 1;
+  *p = ++j +6;
   printf("%d, %d, %d, %d", i, j, *p, *q);
 }
